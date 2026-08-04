@@ -2,41 +2,92 @@
 // Keep this file named exactly "inspiration-library-data.js" and in the same folder as the app.
 window.__INSPIRATION_LIBRARY_DATA__ = [
   {
-    "id": "itm_y88c4hl2msdo4cc5",
-    "title": "Nav-Oura — Three-State Adaptive Navigation System",
-    "imageUrl": "screenshots/navigation/nav-oura.png",
-    "sourceUrl": "https://ouraring.com/",
-    "category": "Navigation",
-    "tags": [
-      "dropdown shade mega menu",
-      "scroll hide/reveal nav",
-      "floating eyebrow subnav",
-      "icon+label menu grid",
-      "consistent logo/cart anchor"
-    ],
-    "notes": "A top nav bar keeps its logo, primary links, and cart icon in a fixed position across every state, but changes behavior based on user interaction. In its default resting state it sits transparent over the hero content. When a nav item is selected, a full-width dropdown shade drops down beneath the bar, dimming the hero behind it and revealing a two-column grid of icon-and-label menu items alongside a small featured image card. On scroll, the nav hides itself as the user scrolls down, then reappears when scrolling up — and in its reappeared state, it also surfaces a secondary floating 'eyebrow' row of contextual sub-links with an active-item underline indicator. This pattern would suit any content-rich site wanting a navigation system that stays unobtrusive by default but reveals rich structure and context exactly when needed.",
-    "promptFragment": "[default state]\nBuild a top navigation bar with a logo on the left, a horizontal row of primary text links (some with dropdown chevrons) centered or left-of-center, and a circular cart/icon button on the right. In its resting state, the nav sits transparent/overlaid on the hero content beneath it with no background fill. Customization options: nav background (transparent vs. solid), link count, and logo position.\n\n[dropdown menu state]\nWhen a nav item with a dropdown is selected, animate in a full-width dropdown shade panel directly beneath the nav bar: the underlying page content dims/blurs behind it, and the panel reveals a two-column grid of menu items, each row pairing a small icon with a text label, plus a featured image card (with a caption and circular arrow-icon link) positioned to one side of the grid. The active nav link shows an underline or bold state to indicate selection. Customization options: menu grid columns (1-3), inclusion of a featured image card, icon style, and dropdown panel background color/opacity.\n\n[scroll behavior]\nImplement scroll-based nav visibility: the nav bar hides/slides up out of view when the user scrolls down, and slides back into view when the user scrolls up. When the nav reappears on scroll-up, also reveal a secondary floating 'eyebrow' sub-navigation row beneath it, showing several short contextual link labels with a thin underline/progress indicator beneath the currently active item. Customization options: hide/reveal trigger sensitivity, eyebrow row content type (contextual links vs. breadcrumbs), and transition style (slide vs. fade).",
-    "createdAt": 1785788089205
-  },
-  {
-    "id": "itm_2sn7lx8dmsdh8cw9",
-    "title": "Musemind-Verae — Dark Hero with Edge-Bleeding Display Type",
-    "imageUrl": "screenshots/site/musemind-verae.png",
+    "id": "itm_ob7daqf9mse3gk2r",
+    "title": "Nexum-Revolution — Dark Hero with Ghost Wordmark and Mixed-Weight Headline",
+    "imageUrl": "screenshots/site/nexum-revolution.png",
     "sourceUrl": "",
     "category": "Site",
     "tags": [
-      "edge-bleeding display type",
-      "dark moody hero photo",
-      "floating product accents",
-      "dual cta pairing",
-      "framed page border"
+      "ghost/watermark wordmark",
+      "mixed-weight headline",
+      "duotone dark photography",
+      "split content layout",
+      "pill nav cta"
     ],
-    "notes": "A dark, moody hero section is framed by a thin inset border around the entire page, with a minimal top nav holding a wordmark left, centered text links, and a rounded outlined CTA on the right. A short paragraph and two stacked CTA buttons (one solid accent color, one outlined) sit in the upper-left, while a large portrait photograph anchors the right side with small floating product renders and faint light-trail accents layered over it. At the base of the hero, an oversized display headline bleeds off both edges of the frame, overlapping the photo and pushing far past typical text-container boundaries for dramatic scale. This pattern would suit a premium beauty, wellness, or lifestyle brand wanting a bold, editorial, high-contrast first impression.",
-    "promptFragment": "Build a dark-mode hero section with: (1) a thin inset border/frame around the entire hero area on a dark background; (2) a minimal top nav inside the frame with a wordmark logo left, centered text nav links, and a rounded outlined CTA button on the right; (3) upper-left positioned short paragraph text followed by two stacked CTA buttons (one solid accent-color pill button, one outlined pill button); (4) a large portrait/lifestyle photo anchored right, with 1-2 small floating product-render images layered over/near it and faint curved light-trail line accents for depth; (5) a massive oversized display headline (single word or short phrase) positioned at the bottom of the hero, sized large enough to bleed off both left and right edges of the frame, overlapping the photo above it. Customization options: color palette (dark moody vs. light/neutral), headline scale (edge-to-edge vs. contained), CTA pairing style (solid+outline vs. two solids), and floating accent elements (product renders, light trails, or none).",
-    "createdAt": 1785768514285
+    "notes": "A dark top nav holds a wordmark on the left, centered text links, and a pill-shaped 'contact' button with a circular icon on the right. Behind the central photo, a huge, low-opacity ghost wordmark spans the full width of the section as a background watermark, subtly reinforcing the brand without competing with the foreground image. At the base of the hero, a bold split-weight headline (regular and bold treatments mixed within the same phrase) sits on the left, while a short paragraph and a small pill-shaped CTA button with a leading circular icon sit on the right, both anchored to the same baseline. This pattern would suit a design studio, agency, or brand consultancy site wanting a bold, moody, editorial statement hero.",
+    "promptFragment": "[nav]\nBuild a dark top nav bar with a wordmark logo on the left, centered text nav links, and a rounded pill-shaped CTA button with a small leading circular icon on the right. Customization options: nav background (solid dark vs. transparent), link count, and CTA icon style.\n\n[hero]\nBuild a dark-mode hero section with: (1) a large, low-opacity ghost/watermark wordmark spanning the full width of the section, positioned behind the central photo as a background layer; (2) a full-bleed or large centered portrait photo with a dark, moody duotone treatment; (3) at the bottom of the hero, a two-column split: left side holds a bold multi-line headline mixing regular and bold font weights within the same phrase for emphasis, right side holds a short paragraph of supporting text and a small pill-shaped CTA button with a leading circular arrow icon, both aligned to the same baseline as the headline. Customization options: ghost wordmark opacity/size, headline weight-mixing pattern, photo treatment (duotone, full color, grayscale), and split-column ratio (headline vs. copy width).",
+    "createdAt": 1785813853347
   },
   {
-    "id": "itm_xdkloej7msdh8cw9",
+    "id": "itm_tsbvqcywmse3dmgp",
+    "title": "Terracotta-Glow — Oversized Mixed-Style Headline Hero with Landscape Product Shot",
+    "imageUrl": "screenshots/site/terracotta-glow.png",
+    "sourceUrl": "",
+    "category": "Site",
+    "tags": [
+      "oversized mixed-style headline",
+      "product floating on landscape",
+      "parenthetical eyebrow nav labels",
+      "numbered slide index + arrows",
+      "product label + pill cta"
+    ],
+    "notes": "A top nav row uses small parenthetical eyebrow-style labels evenly spaced across the width, replacing typical nav links with a lighter, more editorial navigation treatment. Below it, a massive display headline spans the full width, mixing an upright weight for the first word with an italic treatment for the second, layered directly over a wide landscape photograph at golden-hour lighting. The product sits centered and floating within the scene, framed naturally against the horizon. At the base of the hero, a numbered slide index sits opposite a small product name label, with prev/next circular arrow controls at the outer edges and a solid pill CTA button anchored to the bottom-right. This pattern would suit a premium home or lifestyle product launch page wanting a cinematic, editorial reveal.",
+    "promptFragment": "[nav]\nBuild a top nav row with 3-4 small parenthetical-style eyebrow labels (e.g. wrapped in parentheses) evenly spaced across the width, centered vertically, in place of a standard nav — optionally with a small centered icon/mark at the midpoint. Customization options: label count, label style (parenthetical vs. plain uppercase), and icon presence.\n\n[hero]\nBuild a full-bleed landscape photo hero with an oversized display headline spanning the full width near the top, mixing an upright/regular weight for the first word and an italic weight for the second word of the same phrase, in light-colored text over the photo. Center a product image within the lower-middle portion of the photo, floating naturally against the horizon/background. Customization options: headline weight-mixing pattern, product position (centered vs. offset), and photo time-of-day/lighting treatment.\n\n[carousel footer]\nBuild a footer bar anchored to the bottom of the hero: a small numbered slide index (e.g. '(01)') paired with a product name label on the left, small circular prev/next arrow buttons at the outer left and right edges, and a solid pill-shaped CTA button anchored to the bottom-right. Customization options: index format, arrow button style, and CTA text/color.",
+    "createdAt": 1785813716473
+  },
+  {
+    "id": "itm_8pwrtwalmse32rvg",
+    "title": "Trois-Mennour — Centered Exhibition Hero with Peek-Through Carousel",
+    "imageUrl": "screenshots/site/trois-mennour.png",
+    "sourceUrl": "",
+    "category": "Site",
+    "tags": [
+      "centered serif title + meta",
+      "peek-through carousel",
+      "hamburger + centered wordmark nav",
+      "outlined pill cta",
+      "gallery installation photography"
+    ],
+    "notes": "A minimal top nav pairs a hamburger icon and small text links on the left with a centered serif wordmark, and utility icons on the right. Below it, a centered content block presents a bold serif title, a smaller subtitle, and small date/location meta lines, followed by a rounded outlined pill CTA. Beneath the text, a peek-through image carousel shows a full-width center slide flanked by partially visible edges of the adjacent slides, with small circular arrow controls layered on top to indicate horizontal navigation. This pattern would suit a gallery, museum, or cultural institution site wanting an editorial, exhibition-poster feel for showcasing installation photography.",
+    "promptFragment": "[nav]\nBuild a minimal top nav bar with a hamburger menu icon and 2-3 small text links on the left, a centered serif wordmark/logo, and 2-3 utility icons (account, cart/bag, search) on the right, all on a plain white background. Customization options: left-side link count, logo style (serif wordmark vs. mark), and icon count.\n\n[hero]\nBuild a centered text block with a bold serif title (can wrap to 2 lines), a smaller subtitle beneath it, and 1-2 small centered meta lines (date range, location) in muted small text, followed by a rounded outlined pill-shaped CTA button. Customization options: title size, subtitle presence, meta line count, and CTA style (outlined vs. solid).\n\n[carousel]\nBuild a peek-through image carousel: a full-width center slide with the adjacent previous/next slides partially visible (cropped) at the left and right edges of the viewport, creating a sense of continuation off-screen. Overlay small circular arrow-icon buttons on the left and right edges of the center slide for manual navigation. Customization options: peek amount (how much of adjacent slides shows), slide aspect ratio, arrow button style (outlined vs. filled), and autoplay vs. manual-only navigation.",
+    "createdAt": 1785813210268
+  },
+  {
+    "id": "itm_3skwdk8kmse2xm7y",
+    "title": "Oura-Ring — Serif Display Hero with Product in Natural Scene",
+    "imageUrl": "screenshots/hero/oura-ring.png",
+    "sourceUrl": "",
+    "category": "Hero",
+    "tags": [
+      "large serif display headline",
+      "product nestled in textured scene",
+      "pill cta button",
+      "small badge next to product name",
+      "centered hero layout"
+    ],
+    "notes": "A minimal top nav sits above a centered hero: a small product name label paired with a small circular version badge, followed by a very large serif display headline set as a short punchy phrase. A shorter supporting line sits beneath it, and the composition centers on a full-bleed photo of the physical product placed directly into a natural, textured environment rather than isolated on a plain background. A single centered pill-shaped CTA button sits below the product, with a small trust/eligibility microcopy line directly underneath it. This pattern would suit a premium hardware or wearable product page wanting an elevated, editorial reveal moment for its product.",
+    "promptFragment": "Build a centered hero section with: (1) a minimal top nav with logo left, dropdown text links centered/left-of-center, and a circular icon button on the right; (2) centered above the headline, a small product name label paired with a small circular numbered/version badge; (3) a very large serif display headline as a short punchy phrase (2-4 words), centered; (4) a smaller centered supporting subtext line beneath the headline; (5) a full-bleed photo composition where the product sits naturally embedded in a textured, real-world environment (not on a plain studio background), positioned centrally in the lower half of the hero; (6) a single centered pill-shaped solid-color CTA button below the product, with a small trust/eligibility microcopy line (with a checkmark icon) directly beneath the button. Customization options: headline typography (serif vs. sans display), environment/background treatment (natural texture vs. studio vs. gradient), CTA color, and presence/style of the trust microcopy line.",
+    "createdAt": 1785812969662
+  },
+  {
+    "id": "itm_4b1fdljtmse2q1yw",
+    "title": "Odama-Fandit — Hero with 3D Staggered Image Carousel",
+    "imageUrl": "screenshots/hero/odama-fandit.png",
+    "sourceUrl": "",
+    "category": "Hero",
+    "tags": [
+      "3d staggered carousel",
+      "clickable image links",
+      "monospace headline",
+      "pill cta button",
+      "minimal top nav"
+    ],
+    "notes": "A minimal top nav holds a wordmark logo on the left, centered text links, and search/cart icons on the right, all set against a plain white background. Below it, a centered monospace-style headline sits above a single black pill-shaped CTA button. The lower half of the hero is a row of five vertically staggered images at uneven heights and widths, creating a 3D, shelf-like carousel effect; each image is individually clickable and links out to its own page, functioning as a visual entry point into different content categories rather than a static gallery. This pattern would suit a furniture, home goods, or lifestyle retail site wanting an editorial, tactile browsing entry point.",
+    "promptFragment": "[nav]\nBuild a minimal top nav bar with a text logo on the left, centered text nav links, and search/cart icons on the right, all on a plain white background. Customization options: link count, icon count, and logo style (text vs. mark).\n\n[hero]\nBuild a centered hero header with a headline in a monospace or typewriter-style font (2 lines), a short vertical gap, and a single centered pill-shaped CTA button (solid dark background, white text) beneath it. Customization options: headline font (monospace vs. serif vs. sans), CTA button style (pill vs. rounded-rect), and CTA color.\n\n[carousel]\nBuild a row of 5 images arranged in a staggered/offset layout with varying heights and vertical positions (alternating up/down) to create a 3D, shelf-like depth effect, with consistent horizontal gutter spacing between them. Each image in the row should be an independent clickable link/card (not a single sliding carousel), with a subtle hover state (scale or shadow lift) to indicate interactivity. Customization options: number of images (3–6), stagger pattern (alternating vs. random offsets), and image aspect ratio.",
+    "createdAt": 1785812616824
+  },
+  {
+    "id": "itm_sq25p4momscnxh0t",
     "title": "Cards-Verae — Horizontal Frosted Glass Product Cards",
     "imageUrl": "screenshots/cards/cards-verae.png",
     "sourceUrl": "",
@@ -50,10 +101,27 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     ],
     "notes": "A stacked list of horizontal product cards sits on a dark, moody textured background, with each card using a semi-transparent frosted-glass fill that lets the underlying texture subtly show through. Each card follows a consistent image-left, text-right split: a smaller rounded image tile on the left, and on the right a top row pairing a small uppercase category label with a right-aligned price in an accent color, followed by a bold product title, a short muted description line, and a circled plus-icon 'add to cart' control at the bottom. This pattern would suit a premium skincare, wellness, or boutique product listing wanting a dark, tactile, editorial feel.",
     "promptFragment": "Build a vertical stack of horizontal product cards with: (1) a semi-transparent frosted-glass card background (blurred/translucent fill) sitting on a dark textured page background; (2) a smaller rounded-corner product image tile anchored to the left side of each card, vertically centered; (3) a right-side content area with a top row containing a small uppercase category label on the left and a bold accent-color price on the right; (4) a bold product title beneath the label row, followed by a short muted-color description line; (5) a circled plus-icon button paired with 'Add to cart' text near the bottom of the content area. Use consistent card corner-radius, generous internal padding, and even vertical gaps between stacked cards. Customization options: card count, image size/position (left vs. right), category label style (text vs. pill badge), price color/accent, and glass opacity/blur intensity.",
-    "createdAt": 1785768471035
+    "createdAt": 1785727302509
   },
   {
-    "id": "itm_tfzbzfwhmsdh8cw9",
+    "id": "itm_3613q6u7mscnuf4l",
+    "title": "Musemind-Verae — Dark Hero with Edge-Bleeding Display Type",
+    "imageUrl": "screenshots/site/musemind-verae.png",
+    "sourceUrl": "",
+    "category": "Site",
+    "tags": [
+      "edge-bleeding display type",
+      "dark moody hero photo",
+      "floating product accents",
+      "dual cta pairing",
+      "framed page border"
+    ],
+    "notes": "A dark, moody hero section is framed by a thin inset border around the entire page, with a minimal top nav holding a wordmark left, centered text links, and a rounded outlined CTA on the right. A short paragraph and two stacked CTA buttons (one solid accent color, one outlined) sit in the upper-left, while a large portrait photograph anchors the right side with small floating product renders and faint light-trail accents layered over it. At the base of the hero, an oversized display headline bleeds off both edges of the frame, overlapping the photo and pushing far past typical text-container boundaries for dramatic scale. This pattern would suit a premium beauty, wellness, or lifestyle brand wanting a bold, editorial, high-contrast first impression.",
+    "promptFragment": "Build a dark-mode hero section with: (1) a thin inset border/frame around the entire hero area on a dark background; (2) a minimal top nav inside the frame with a wordmark logo left, centered text nav links, and a rounded outlined CTA button on the right; (3) upper-left positioned short paragraph text followed by two stacked CTA buttons (one solid accent-color pill button, one outlined pill button); (4) a large portrait/lifestyle photo anchored right, with 1-2 small floating product-render images layered over/near it and faint curved light-trail line accents for depth; (5) a massive oversized display headline (single word or short phrase) positioned at the bottom of the hero, sized large enough to bleed off both left and right edges of the frame, overlapping the photo above it. Customization options: color palette (dark moody vs. light/neutral), headline scale (edge-to-edge vs. contained), CTA pairing style (solid+outline vs. two solids), and floating accent elements (product renders, light trails, or none).",
+    "createdAt": 1785727160085
+  },
+  {
+    "id": "itm_6a9u1uc5mscnimjx",
     "title": "Odama-Corals — Organic Blob Hero with Alternating Content Rows",
     "imageUrl": "screenshots/site/odama-corals.png",
     "sourceUrl": "",
@@ -70,7 +138,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785726609837
   },
   {
-    "id": "itm_ddtobd9bmsdh8cw9",
+    "id": "itm_ltnnt7iomscnegde",
     "title": "Roman-Zajno — Vertical Divider Feature Grid with Active Column State",
     "imageUrl": "screenshots/site/roman-zajno.png",
     "sourceUrl": "",
@@ -87,7 +155,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785726415202
   },
   {
-    "id": "itm_e4xlvisrmsdh8cw9",
+    "id": "itm_w5kzr9pnmscn6xk4",
     "title": "Winter-Qclay — Full-Bleed Photo Hero with Carousel and Caption Row",
     "imageUrl": "screenshots/site/winter-qclay.png",
     "sourceUrl": "",
@@ -104,24 +172,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785726064228
   },
   {
-    "id": "itm_w3xvp1upmsdh8cw9",
-    "title": "Odama-Fandit — Hero with 3D Staggered Image Carousel",
-    "imageUrl": "screenshots/hero/odama-fandit.png",
-    "sourceUrl": "",
-    "category": "Hero",
-    "tags": [
-      "3d staggered carousel",
-      "clickable image links",
-      "monospace headline",
-      "pill cta button",
-      "minimal top nav"
-    ],
-    "notes": "A minimal top nav holds a wordmark logo on the left, centered text links, and search/cart icons on the right, all set against a plain white background. Below it, a centered monospace-style headline sits above a single black pill-shaped CTA button. The lower half of the hero is a row of five vertically staggered images at uneven heights and widths, creating a 3D, shelf-like carousel effect; each image is individually clickable and links out to its own page, functioning as a visual entry point into different content categories rather than a static gallery. This pattern would suit a furniture, home goods, or lifestyle retail site wanting an editorial, tactile browsing entry point.",
-    "promptFragment": "Build a hero section with: (1) a minimal top nav bar with a text logo on the left, centered text nav links, and search/cart icons on the right; (2) a centered headline in a monospace or typewriter-style font, 2 lines, with a short vertical gap before; (3) a single centered pill-shaped CTA button (solid dark background, white text) below the headline; (4) a row of 5 images arranged in a staggered/offset layout with varying heights and vertical positions (alternating up/down) to create a 3D, shelf-like depth effect, with consistent horizontal gutter spacing between them. Each image in the row should be an independent clickable link/card (not a single sliding carousel), with a subtle hover state (scale or shadow lift) to indicate interactivity. Customization options: number of images in the row (3–6), stagger pattern (alternating vs. random offsets), image aspect ratio, headline font (monospace vs. serif vs. sans), and CTA button style (pill vs. rounded-rect).",
-    "createdAt": 1785725832507
-  },
-  {
-    "id": "itm_iihkufexmsdh8cw9",
+    "id": "itm_li4k6m4hmscmtzpq",
     "title": "Conceptzilla-Pulse — Dark Hero with Logo Trust Bar and Device Mockups",
     "imageUrl": "screenshots/site/conceptzilla-pulse.png",
     "sourceUrl": "",
@@ -138,7 +189,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785725460494
   },
   {
-    "id": "itm_800kdv8kmsdh8cw9",
+    "id": "itm_qi3qtpfjmscmkc52",
     "title": "Cards-Medixa — Alternating Color-Block Feature Card Grid",
     "imageUrl": "screenshots/cards/cards-medixa.png",
     "sourceUrl": "",
@@ -155,7 +206,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785725010038
   },
   {
-    "id": "itm_meei7nz9msdh8cw9",
+    "id": "itm_pa8079nbmscm88by",
     "title": "Miah-Beard — Split Hero Ecommerce Landing with Product Grid and Trust Badges",
     "imageUrl": "screenshots/site/miah-beard.png",
     "sourceUrl": "https://dribbble.com/shots/27612800-The-Gentlemans-Beard-Home-Page-Redesign",
@@ -173,7 +224,24 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "createdAt": 1785724445230
   },
   {
-    "id": "itm_86ux3dtwmsdh8cw9",
+    "id": "itm_v2dcekhjmscfgo46",
+    "title": "Conceptzilla-Codera — Bold Full-Bleed Hero Landing Page",
+    "imageUrl": "screenshots/hero/conceptzilla-codera.png",
+    "sourceUrl": "",
+    "category": "Hero",
+    "tags": [
+      "oversized headline",
+      "centered nav",
+      "full-bleed photo",
+      "pill button",
+      "generous whitespace"
+    ],
+    "notes": "A centered logo anchors a symmetrical top nav, with text links balanced on the left and a single pill-shaped CTA button on the right. Below it, an oversized bold headline sits in a tight two-line stack, paired with a smaller centered subhead and wide vertical whitespace above and below. The lower half transitions into a full-bleed photograph that bleeds to the edges and acts as a visual anchor without any overlaid text, letting the copy and image breathe as distinct zones. This pattern would suit any product or service landing page that wants a confident, editorial first impression.",
+    "promptFragment": "Build a hero landing page section with: (1) a centered logo/wordmark in the nav bar, flanked by left-aligned text nav links and a right-aligned pill-shaped CTA button with rounded-full corners; (2) a large, bold, oversized headline (2 lines, tight line-height, centered) in a heavy sans-serif weight; (3) a smaller centered subheading below it with generous margin/whitespace; (4) a full-bleed image or photo section beneath the text block that extends edge-to-edge with no overlay text, acting as a visual anchor. Use a light/white background above the image, ample vertical padding between all elements, and a minimal, high-contrast color palette (black text on white, one dark CTA button).",
+    "createdAt": 1784951056226
+  },
+  {
+    "id": "itm_qdm3757nmscfgo46",
     "title": "Cards-Outcrowd — asymmetric bento grid with illustrative mockups",
     "imageUrl": "screenshots\\elements\\Cards-Outcrowd.png",
     "sourceUrl": "",
@@ -188,57 +256,5 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "notes": "Instead of a uniform grid of equal-size cards, sizes vary — a couple of cards run wider or taller than the rest, which keeps a fairly plain heading-plus-subtext pattern from feeling repetitive. Each card illustrates its point with a small rendered mockup (a phone screen, a stacked-card graphic, a dashboard preview) rather than a generic icon, which makes every card feel like a specific product moment instead of an abstract feature bullet. One card is inverted to a dark background among otherwise light cards, which pulls focus to it without changing its size or position in the grid. Soft rounded corners and consistent internal padding keep the varied content from feeling chaotic.",
     "promptFragment": "Build a bento-style feature grid with 5 cards in an asymmetric layout (e.g. a 3-column top row of similar-sized cards, then a 2-column bottom row with one narrower and one wider card). Each card has generous padding, soft rounded corners, and light drop shadow. Inside each card: a short heading, one line of supporting body text, and a small illustrative graphic specific to that feature (e.g. a mocked-up phone UI, a small dashboard preview, a couple of overlapping physical card graphics) rather than a generic icon. Make one card (ideally the visually largest) use an inverted dark background and light text to stand out against the otherwise light, neutral-background cards. Keep spacing consistent across all cards despite their different sizes.",
     "createdAt": 1784949939799
-  },
-  {
-    "id": "itm_ss4ni5ogmsdh8cw9",
-    "title": "Conceptzilla-Codera — Bold Full-Bleed Hero Landing Page",
-    "imageUrl": "screenshots/hero/conceptzilla-codera.png",
-    "sourceUrl": "",
-    "category": "Hero",
-    "tags": [
-      "oversized headline",
-      "centered nav",
-      "full-bleed photo",
-      "pill button",
-      "generous whitespace"
-    ],
-    "notes": "A centered logo anchors a symmetrical top nav, with text links balanced on the left and a single pill-shaped CTA button on the right. Below it, an oversized bold headline sits in a tight two-line stack, paired with a smaller centered subhead and wide vertical whitespace above and below. The lower half transitions into a full-bleed photograph that bleeds to the edges and acts as a visual anchor without any overlaid text, letting the copy and image breathe as distinct zones. This pattern would suit any product or service landing page that wants a confident, editorial first impression.",
-    "promptFragment": "Build a hero landing page section with this layout system: (1) a top nav bar with a centered logo/wordmark, left-aligned text nav links, and a right-aligned pill-shaped CTA button with fully rounded corners; (2) a large, bold, oversized headline in a heavy sans-serif weight, set across 2 tight lines and centered; (3) a smaller centered subheading beneath it with generous vertical margin; (4) a full-bleed image section below the text block that extends edge-to-edge with no overlaid text, functioning purely as a visual anchor. Keep the top section on a light/white background, use ample vertical padding between all elements, and a minimal, high-contrast palette (dark text on white, one solid-color CTA button). Customization options: color palette (light/dark/brand-accent), content density (compact vs. spacious spacing), CTA style (pill vs. rounded-rect vs. ghost outline), headline size/weight scale, and image treatment (full color, duotone, gradient overlay, or cropped aspect ratio).",
-    "createdAt": 1784995967543
-  },
-  {
-    "id": "itm_0vdj1ifamsdh8cw9",
-    "title": "CWS-Beyond — oversized type over full-bleed photo, floating info cards",
-    "imageUrl": "screenshots/hero/CWS-Beyond.png",
-    "sourceUrl": "",
-    "category": "Hero",
-    "tags": [
-      "oversized bold typography",
-      "full-bleed cinematic photography",
-      "pill-shaped nav",
-      "rounded button",
-      "eyebrow label above headline",
-      "floating info cards"
-    ],
-    "notes": "The headline is set large enough that it visually competes with the photo instead of sitting quietly above or below it — the type becomes part of the image rather than a caption for it. A small uppercase eyebrow label sits above the headline to give it context without adding visual weight. Two compact info cards float along the left edge, each pairing a large number or portrait with a short label — a lightweight way to surface credibility stats without a dedicated section. Nav and CTA buttons stay small and pill-shaped so they don't compete with the headline for attention. This full-bleed, photography-first treatment reads as editorial or portfolio-driven, but the structural pattern (oversized type + floating stat cards + minimal nav) would translate to most brand or product hero sections.",
-    "promptFragment": "Build a full-bleed hero section. Structure: a minimal pill-shaped nav bar (logo left, a few text links, one small rounded CTA button on the right) sitting over a large full-bleed photograph. Centered over the photo: a small uppercase eyebrow label, then an oversized bold headline (2 lines, large enough to feel like part of the image), then a short supporting sentence below it, then a small rounded pill button with an icon. Along the lower-left edge of the photo, stack two compact floating info cards with a translucent/frosted background — each card pairs either a large number + short label, or a small image + short label, describing a credential or capability. Keep the overall palette muted and photography-driven rather than color-driven; typography should be bold, tight leading, and large enough to feel monumental against the image.",
-    "createdAt": 1784927548439
-  },
-  {
-    "id": "itm_ef2l6cvxmsdh8cw9",
-    "title": "Eloqwnt-MedSync — pill nav + rounded photo frame",
-    "imageUrl": "screenshots\\hero\\Eloqwnt-MedSync.png",
-    "sourceUrl": "",
-    "category": "Hero",
-    "tags": [
-      "pill-shaped nav bar",
-      "rounded outlined CTA button",
-      "inset hero with rounded corners",
-      "floating stats card overlay",
-      "soft badge above headline"
-    ],
-    "notes": "Two structural choices carry this layout. First, the pill-shaped nav with a fully rounded, outlined CTA button — soft capsule shapes throughout instead of sharp rectangles, which softens what could otherwise feel like a dense, corporate nav. Second, the hero photo isn't full-bleed — it's inset with generous rounded corners and a frame of background color around it, so it reads as a floating card sitting on the page rather than a background image. That framing device alone gives an ordinary photo a more deliberate, designed feel. Would suit a product with a warm, human-centered tone — health, wellness, or consumer services are a natural fit, though the pattern itself is industry-agnostic.",
-    "promptFragment": "Build a hero section. Structure: a pill-shaped navigation bar (logo left, horizontal nav links with one dropdown, a fully rounded outlined CTA button on the right). Below the nav, an inset hero image with generous rounded corners and a frame of background color around it — like a floating card, not full-bleed. Over the image (bottom-left): a small pill-shaped badge with an icon + short stat, a large bold headline (two lines), a short supporting sentence, and a rounded pill CTA button with a trailing icon. Over the image (bottom-right): a small floating card with rounded corners containing a row of overlapping avatars, a large stat with a short label, and a grid of small rounded pill/badge labels. Keep the palette warm and soft with muted accents and soft shadows — no harsh contrast. Typography: clean rounded sans-serif, bold for the headline, lighter weight for supporting copy and badges.",
-    "createdAt": 1784927037874
   }
 ];
