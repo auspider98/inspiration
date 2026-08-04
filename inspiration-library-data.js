@@ -2,6 +2,23 @@
 // Keep this file named exactly "inspiration-library-data.js" and in the same folder as the app.
 window.__INSPIRATION_LIBRARY_DATA__ = [
   {
+    "id": "itm_armgknpsmse3ktl0",
+    "title": "Mellio-Kitpro — Full-Bleed Product Hero with Bottom-Anchored Giant Wordmark",
+    "imageUrl": "screenshots/site/mellio-kitpro.png",
+    "sourceUrl": "",
+    "category": "Site",
+    "tags": [
+      "massive bottom-anchored wordmark",
+      "close-up product photo bg",
+      "tagline above giant logo",
+      "hamburger-only nav",
+      "scroll microcopy cue"
+    ],
+    "notes": "A minimal top bar holds a small logo on the left and a single hamburger icon on the right, with no visible text nav links. The hero is a close-up, moody product photograph filling the entire frame, with a short tagline positioned in the lower-left third of the image, directly above an oversized brand wordmark that spans nearly the full width of the section at the very bottom edge. A small parenthetical scroll cue sits in the opposite bottom corner, hinting at further content below. This pattern would suit a design studio, agency, or brand identity site wanting a bold, confident, editorial name-reveal moment.",
+    "promptFragment": "[nav]\nBuild a minimal top nav bar with a small text or mark logo on the left and a single hamburger menu icon on the right, no visible link list, set over a dark full-bleed photo background. Customization options: logo style (text vs. icon), hamburger icon style, and nav background (transparent vs. subtle gradient).\n\n[hero]\nBuild a hero section with a close-up, moody full-bleed product or object photograph as the background. In the lower-left area, place a short one-to-two-line tagline in a medium-weight sans-serif, positioned directly above an oversized brand wordmark (the largest text element on the page) that spans most of the section width at the bottom edge, optionally with a small trademark/superscript symbol. In the opposite bottom corner, add a small parenthetical scroll-cue label (e.g. '(Scroll)') in muted small text. Customization options: wordmark scale (fills width vs. partial), tagline position, photo treatment (close-up macro vs. wide shot), and scroll-cue presence/style.",
+    "createdAt": 1785814052292
+  },
+  {
     "id": "itm_ob7daqf9mse3gk2r",
     "title": "Nexum-Revolution — Dark Hero with Ghost Wordmark and Mixed-Weight Headline",
     "imageUrl": "screenshots/site/nexum-revolution.png",
@@ -56,7 +73,7 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
     "id": "itm_3skwdk8kmse2xm7y",
     "title": "Oura-Ring — Serif Display Hero with Product in Natural Scene",
     "imageUrl": "screenshots/hero/oura-ring.png",
-    "sourceUrl": "",
+    "sourceUrl": "https://ouraring.com/",
     "category": "Hero",
     "tags": [
       "large serif display headline",
