@@ -2,6 +2,58 @@
 // Keep this file named exactly "inspiration-library-data.js" and in the same folder as the app.
 window.__INSPIRATION_LIBRARY_DATA__ = [
   {
+    "id": "itm_mrioqok7msrs25ce",
+    "title": "Haque — Pill-Style FAQ Accordion with Expanded Solid-Color State",
+    "imageUrl": "screenshots/section/haque-faq.png",
+    "sourceUrl": "",
+    "category": "FAQ/Accordion",
+    "tags": [
+      "expanded solid-color accordion item",
+      "pill-style accordion rows",
+      "plus/minus toggle icon",
+      "right-aligned circular icon",
+      "centered heading above list"
+    ],
+    "notes": "A centered bold heading sits above a vertically stacked list of rounded, pill-style accordion rows. The first item is shown in its expanded/active state with a solid dark accent-color background, a bold question, a visible answer line beneath it, and a minus-icon toggle in a circular button on the right. The remaining collapsed items sit on a plain white background with rounded borders, each showing just the question text and a plus-icon toggle in the same right-aligned circular position for visual consistency across states. This pattern would suit any FAQ, help center, or support section wanting a soft, approachable accordion interaction.",
+    "promptFragment": "Build a vertically stacked FAQ accordion list beneath a centered bold heading. Each row is a rounded, pill-style container with consistent horizontal padding and corner-radius. The first/expanded item has a solid accent-color background, a bold question in light text, a visible answer paragraph beneath it, and a circular minus-icon toggle button aligned to the right edge. The remaining collapsed items sit on a plain white/light background with a subtle border, showing only the question text and a circular plus-icon toggle button in the same right-aligned position as the expanded item's icon, for visual consistency across open/closed states. Customization options: accent color for the expanded state, icon style (plus/minus vs. chevron), row corner-radius (pill vs. slightly rounded), and number of visible FAQ items.",
+    "createdAt": 1786641231758
+  },
+  {
+    "id": "itm_qab4trbbmsrrykzc",
+    "title": "Haque — Blog Card Grid with Pill Category Tags",
+    "imageUrl": "screenshots/section/haque-blog.png",
+    "sourceUrl": "",
+    "category": "Blog Grid",
+    "tags": [
+      "two-column blog card grid",
+      "pill category tag",
+      "header + intro + cta row",
+      "date + author byline",
+      "outlined pill learn more button"
+    ],
+    "notes": "A header row pairs a bold left-aligned heading with a short supporting paragraph to its right, and a solid pill-shaped 'view all' CTA button anchored to the far right. Beneath it, a two-column grid of blog cards sits on a soft pastel background container, each card showing a photo, a small pill-shaped category tag and a date in the top corner, a bold title, a short excerpt, an author byline, and an outlined pill 'learn more' button. This pattern would suit a blog, resource hub, or content-marketing section wanting a clean, scannable article preview layout.",
+    "promptFragment": "[header]\nBuild a section header row with a bold left-aligned heading (can wrap to 2 lines) paired with a short supporting paragraph positioned to its right on the same row, and a solid pill-shaped CTA button anchored to the far right edge. Customization options: heading/paragraph column split, CTA text/position, and alignment (left vs. centered).\n\n[cards]\nBuild a two-column grid of blog preview cards on a soft pastel background container with rounded outer corners. Each card contains: a photo at the top, a row beneath it with a small pill-shaped category tag on the left and a date on the right, a bold article title, a short excerpt/description, an author byline line, and an outlined pill-shaped 'learn more' button at the bottom. Customization options: grid columns (2-3), card count, tag/date row style, and button style (outlined vs. solid).",
+    "createdAt": 1786641065400
+  },
+  {
+    "id": "itm_r7unra76msrreqc3",
+    "title": "Haque-Fitness — Bold Split-Color Fitness Landing Page with Marquee and Live Feed",
+    "imageUrl": "screenshots/site/haque-fitness.webp",
+    "sourceUrl": "https://dribbble.com/shots/27614800-Fitness-Training-Landing-Page-UI-UX-Design",
+    "category": "Site",
+    "tags": [
+      "scrolling marquee strip",
+      "numbered program cards",
+      "live feed + chat testimonial",
+      "pill floating nav",
+      "pricing table w/ highlighted tier",
+      "dark bordered cta banner"
+    ],
+    "notes": "A pill-shaped floating nav bar sits inset from the page edges, holding a logo, text links, and a solid dark CTA button. The hero splits into a bright accent-color upper half and a black lower half, with a giant headline overlapping both halves and a large photo cut into the type. A horizontal marquee strip of keyword tags with small icon dividers runs beneath the hero as a scrolling ticker. A numbered set of program cards follows, each with a photo, large index number, title, and short description. Further down, a live activity feed card sits beside a chat-style testimonial bubble showing a quoted message, timestamp, and a small stat progress bar. A 'why us' section pairs a photo with a checklist of numbered value props, followed by a trainer grid, a testimonial quote section, a three-tier pricing table with a highlighted 'most popular' column, and a dark bordered CTA banner footer with a secondary accent-color word in the headline. This pattern would suit a fitness, coaching, or membership-based service site wanting an energetic, high-contrast, conversion-focused layout.",
+    "promptFragment": "[nav]\nBuild a pill-shaped floating nav bar inset from the page edges with rounded-full corners: a logo on the left, centered text nav links, and a solid dark rounded CTA button on the right. Customization options: pill background color, link count, and CTA style.\n\n[hero]\nBuild a split-background hero: upper portion in a bright accent color, lower portion in solid black, with a giant bold headline (single word or short phrase) positioned so it visually overlaps both color halves. Include a smaller supporting paragraph and a solid dark CTA button in the upper-left, and a large photo subject cut into or layered against the giant headline type for depth. Customization options: split ratio (upper/lower), accent color, headline scale, and photo treatment (cutout vs. rectangular).\n\n[marquee]\nBuild a horizontal scrolling marquee/ticker strip beneath the hero, displaying a repeating row of short keyword tags separated by small icon dividers (e.g. a star or plus icon), scrolling continuously left-to-right or right-to-left. Customization options: keyword count, scroll speed, and divider icon style.\n\n[program cards]\nBuild a row of numbered program cards, each with a top photo, a large faded index number (01, 02, 03) overlaid in a corner, a bold title, a short description, and small meta tags (duration, level) at the bottom with a circular arrow-icon link. Customization options: card count, number placement, and photo aspect ratio.\n\n[live feed]\nBuild a two-part social-proof section: a live-session card with a small 'live' badge, a photo, and a caption label; and a stat/progress card beneath it with a bar chart icon, a bold stat callout, and a caption. Beside these, build a chat-style testimonial bubble card with a small avatar/name header, a timestamp, a short quoted message, a star rating, and a 'more stories' link. Customization options: card count, live badge style, and testimonial bubble shape.\n\n[why us]\nBuild a two-column section pairing a large photo on one side with a numbered checklist of value propositions on the other (bold short title + short description per item), a small stat callout badge overlapping the photo corner, and a solid dark CTA button beneath the list. Customization options: numbered item count, stat badge position, and column order.\n\n[trainers]\nBuild a three-column trainer/team grid, each card showing a portrait photo, a small pill badge (e.g. client count), a name, and a short specialty/experience line beneath. Customization options: column count and badge content.\n\n[testimonials]\nBuild a testimonial section with a large quote-mark icon, a multi-line quoted testimonial in large text, a reviewer name/title line, a star rating, and a small highlighted stat pill badge (e.g. a result metric) beside it. Customization options: quote length, stat badge presence, and layout (single quote vs. carousel).\n\n[pricing]\nBuild a three-column pricing table on a dark background: a billing-toggle pill switch above the cards, each card showing a plan name, price with per-period label, a bulleted feature list with checkmarks, and a CTA button; the middle 'most popular' card is visually elevated with an accent-color background and a small badge label. Customization options: tier count, highlighted tier position, and accent color.\n\n[cta banner]\nBuild a dark, thin-bordered CTA banner section with a bold multi-line headline (one word in an accent color), a short supporting line, a member-count or social-proof microcopy, and a solid accent-color rounded CTA button. Customization options: border style, headline accent placement, and CTA position (inline vs. stacked).",
+    "createdAt": 1786640139219
+  },
+  {
     "id": "itm_armgknpsmse3ktl0",
     "title": "Mellio-Kitpro — Full-Bleed Product Hero with Bottom-Anchored Giant Wordmark",
     "imageUrl": "screenshots/site/mellio-kitpro.png",
@@ -105,10 +157,10 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
   },
   {
     "id": "itm_sq25p4momscnxh0t",
-    "title": "Cards-Verae — Horizontal Frosted Glass Product Cards",
-    "imageUrl": "screenshots/cards/cards-verae.png",
+    "title": "Verae — Horizontal Frosted Glass Product Cards",
+    "imageUrl": "screenshots/section/verae-price.png",
     "sourceUrl": "",
-    "category": "Cards",
+    "category": "Pricing",
     "tags": [
       "horizontal glass card",
       "frosted/translucent background",
@@ -207,10 +259,10 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
   },
   {
     "id": "itm_qi3qtpfjmscmkc52",
-    "title": "Cards-Medixa — Alternating Color-Block Feature Card Grid",
-    "imageUrl": "screenshots/cards/cards-medixa.png",
+    "title": "Medixa — Alternating Color-Block Feature Card Grid",
+    "imageUrl": "screenshots/section/medixa-service.png",
     "sourceUrl": "",
-    "category": "Cards",
+    "category": "Services",
     "tags": [
       "feature tile grid",
       "color-coded cards",
@@ -259,8 +311,8 @@ window.__INSPIRATION_LIBRARY_DATA__ = [
   },
   {
     "id": "itm_qdm3757nmscfgo46",
-    "title": "Cards-Outcrowd — asymmetric bento grid with illustrative mockups",
-    "imageUrl": "screenshots\\elements\\Cards-Outcrowd.png",
+    "title": "Outcrowd — asymmetric bento grid with illustrative mockups",
+    "imageUrl": "screenshots\\section\\outcrowd-cards.png",
     "sourceUrl": "",
     "category": "Cards",
     "tags": [
