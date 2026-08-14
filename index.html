@@ -105,6 +105,8 @@
   }
   .search-box input::placeholder{ color: var(--text-dim); }
 
+  .search-box-mobile{ display:none; }
+
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     border-radius: 999px; border:1px solid var(--border-strong);
@@ -136,28 +138,63 @@
   .btn svg{ flex-shrink:0; }
 
   /* ---------- Filter bar ---------- */
-  .filter-row{
-    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-    margin-bottom: 30px;
+  .filter-bar{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    flex-wrap:wrap; margin-bottom: 24px;
   }
-  .pill{
-    display:inline-flex; align-items:center; gap:8px;
-    padding: 8px 14px; border-radius: 999px;
-    border: 1px solid var(--border); background: var(--surface);
-    color: var(--text-muted); font-size: 12.5px; font-weight:600;
-    letter-spacing: 0.3px; text-transform: uppercase;
+  .category-select{ min-width:150px; }
+  .toolbar-controls{ display:flex; align-items:center; gap:10px; flex-shrink:0; flex-wrap:wrap; }
+  .filter-divider{ width:1px; height:20px; background: var(--border); margin: 0 4px; flex-shrink:0; }
+
+  /* ---------- Stale export banner ---------- */
+  .stale-banner{
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    background: rgba(204,255,0,0.07); border:1px solid rgba(204,255,0,0.28);
+    border-radius: 12px; padding: 11px 16px; margin-bottom: 22px;
+    font-size: 13px; color: var(--text);
+  }
+  .stale-banner > span:first-child{ display:flex; align-items:center; gap:9px; color: var(--accent); }
+  .stale-banner > div{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+  .stale-dismiss{
+    width:28px; height:28px; border-radius:999px; background:transparent; border:1px solid var(--border);
+    color: var(--text-muted); display:flex; align-items:center; justify-content:center; transition: all .15s ease;
+  }
+  .stale-dismiss:hover{ color: var(--text); border-color: var(--border-strong); }
+
+  /* ---------- Sort select ---------- */
+  .sort-select{
+    background: var(--surface); border:1px solid var(--border); border-radius: 999px;
+    color: var(--text-muted); font-size:12.5px; font-family: var(--font-mono);
+    padding: 9px 14px; outline:none; cursor:pointer; transition: all .15s ease;
+  }
+  .sort-select:hover{ border-color: var(--border-strong); color: var(--text); }
+  .sort-select:focus{ border-color: rgba(204,255,0,0.5); box-shadow: 0 0 0 3px rgba(204,255,0,0.12); }
+
+  /* ---------- Select mode ---------- */
+  .select-toolbar{
+    display:flex; align-items:center; gap:10px; font-size:12.5px; color: var(--text-muted);
     font-family: var(--font-mono);
-    transition: all .15s ease;
   }
-  .pill:hover{ border-color: var(--border-strong); color: var(--text); }
-  .pill.active{
-    background: var(--text); color: #0a0c11; border-color: var(--text);
+  #selectModeBtn.active{ border-color: var(--accent); color: var(--accent); }
+  .card-select-box{
+    display:none; position:absolute; top:10px; left:10px; z-index:3;
+    width:22px; height:22px; border-radius:6px; background: rgba(10,12,17,0.75);
+    backdrop-filter: blur(6px); border:1.5px solid rgba(255,255,255,0.35);
+    align-items:center; justify-content:center; transition: all .15s ease;
   }
-  .pill .count{
-    font-size:11px; opacity:0.65; font-weight:600;
+  .grid.select-mode .card-select-box{ display:flex; }
+  .grid.select-mode .card-catalog{ left:40px; }
+  .card.selected .card-select-box{ background: var(--accent); border-color: var(--accent); }
+  .card.selected{ outline: 2px solid var(--accent); outline-offset: -1px; }
+  .card-select-box svg{ display:none; color:#0a0c11; }
+  .card.selected .card-select-box svg{ display:block; }
+
+  /* ---------- Import duplicate warning ---------- */
+  .import-row.has-dup{ border-color: rgba(242,181,68,0.4); }
+  .import-dup-warning{
+    display:flex; align-items:center; gap:6px; font-size:11px; color: var(--amber);
+    font-family: var(--font-mono); margin-top:2px;
   }
-  .pill.active .count{ opacity: 0.5; }
-  .filter-divider{ width:1px; height:20px; background: var(--border); margin: 0 4px; }
 
   /* ---------- Masonry grid ---------- */
   .grid{
@@ -446,17 +483,39 @@
   }
   .toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
   .toast .dot{ width:7px; height:7px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80; }
+  .toast-action{
+    background:none; border:none; color: var(--accent); font-weight:700; font-size:13px;
+    padding: 0 0 0 4px; margin-left:2px; border-left:1px solid var(--border-strong); padding-left:12px;
+  }
+  .toast-action:hover{ text-decoration: underline; }
 
   @media (max-width: 720px){
-    .shell{ padding: 20px 16px 60px; }
-    header.topbar{ flex-wrap:wrap; row-gap:14px; }
-    .search-box{ max-width:none; flex:1 1 100%; order:2; width:100%; }
-    .autosave-status{ order:3; }
-    .topbar-actions{ order:4; flex:1; justify-content:flex-end; flex-wrap:wrap; row-gap:10px; margin-left:0; }
-    #exportBtn span, #importBtn span{ display:none; }
+    .shell{ padding: 16px 16px 60px; }
+    header.topbar{ flex-wrap:wrap; row-gap:10px; padding-bottom:16px; margin-bottom:16px; border-bottom:none; }
+
+    .topbar-actions{ order:1; margin-left:auto; flex-shrink:0; }
+    .autosave-status{ display:none; }
+    .search-box-desktop{ display:none; }
+    .search-box-mobile{ display:flex; margin-bottom:24px; }
+
+    #importBtn, #exportBtn, #openAddBtnDesktop{
+      width:38px; height:38px; padding:0; border-radius:50%;
+      justify-content:center; gap:0;
+    }
+    #exportBtn span, #importBtn span, #openAddBtnDesktop span{ display:none; }
+    #openAddBtnDesktop{ order:2; margin-left:-8px; }
+
+    .stale-banner{ flex-direction:column; align-items:flex-start; gap:10px; padding:10px 14px; margin-bottom:14px; }
+    .stale-banner > div{ width:100%; justify-content:space-between; }
+
+    .filter-bar{ flex-direction:column; align-items:stretch; gap:8px; margin-bottom:16px; }
+    .category-select{ width:100%; min-width:0; }
+    .toolbar-controls{ justify-content:space-between; width:100%; }
+    .toolbar-controls span#selectCountText{ display:none; }
   }
   @media (max-width: 480px){
-    #exportBtn, #importBtn{ padding: 10px 12px; }
+    .sort-select{ padding:8px 10px; font-size:11.5px; }
+    #selectModeBtn span, #selectAllBtn, #selectCancelBtn{ font-size:11.5px; }
   }
 </style>
 </head>
@@ -471,7 +530,7 @@
         <p id="itemCountLabel">0 items catalogued</p>
       </div>
     </div>
-    <div class="search-box">
+    <div class="search-box search-box-desktop">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       <input id="searchInput" type="text" placeholder="Search titles, tags, notes…">
     </div>
@@ -484,19 +543,57 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M20 17v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2"/></svg>
         <span>Import</span>
       </button>
-      <input type="file" id="importFile" accept="application/json,.json" style="display:none;">
+      <input type="file" id="importFile" accept="application/json,.json,.js,text/javascript" style="display:none;">
       <button class="btn btn-ghost" id="exportBtn" title="Export library as a JSON file">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3"/><path d="M7 8l5-5 5 5"/><path d="M20 17v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2"/></svg>
         <span>Export</span>
       </button>
-      <button class="btn btn-primary" id="openAddBtn">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-        Add inspiration
-      </button>
     </div>
+    <button class="btn btn-primary" id="openAddBtnDesktop">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      <span>Add inspiration</span>
+    </button>
   </header>
 
-  <div class="filter-row" id="filterRow"></div>
+  <div class="stale-banner" id="staleBanner" style="display:none;">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86l-8.18 14.18A2 2 0 004.18 21h15.64a2 2 0 001.87-2.96L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+      You have changes that haven't been exported yet.
+    </span>
+    <div>
+      <button class="btn btn-primary" id="staleExportBtn" style="padding:7px 14px; font-size:12.5px;">Export now</button>
+      <button class="stale-dismiss" id="staleDismissBtn" aria-label="Dismiss">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <select id="categorySelect" class="sort-select category-select" title="Filter by category"></select>
+    <div class="toolbar-controls">
+      <select id="sortSelect" class="sort-select" title="Sort order">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="title-asc">Title A–Z</option>
+        <option value="category-asc">Category A–Z</option>
+      </select>
+      <button class="btn btn-ghost" id="selectModeBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <span>Select</span>
+      </button>
+      <div class="select-toolbar" id="selectToolbar" style="display:none;">
+        <span id="selectCountText">0 selected</span>
+        <button class="btn btn-ghost" id="selectAllBtn">Select all</button>
+        <button class="btn btn-danger" id="selectDeleteBtn">Delete</button>
+        <button class="btn btn-ghost" id="selectCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-box search-box-mobile">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="searchInputMobile" type="text" placeholder="Search titles, tags, notes…">
+  </div>
 
   <div class="grid" id="grid"></div>
   <div class="empty-state" id="emptyState" style="display:none;">
@@ -677,7 +774,7 @@
   <div class="lightbox-hint">Scroll or pinch to zoom · drag to pan · double-click to reset</div>
 </div>
 
-<div class="toast" id="toast"><span class="dot"></span><span id="toastText">Saved</span></div>
+<div class="toast" id="toast"><span class="dot"></span><span id="toastText">Saved</span><button class="toast-action" id="toastActionBtn" style="display:none;"></button></div>
 
 <script>
 (function(){
@@ -765,6 +862,10 @@
   let items = [];
   let activeCategory = "All";
   let hasUnexportedChanges = false;
+  let sortMode = "newest";
+  let selectMode = false;
+  let selectedIds = new Set();
+  let staleBannerDismissed = false;
   let searchQuery = "";
   let editingId = null;
   let detailId = null;
@@ -873,6 +974,7 @@
   // so the Export button can visually flag "you probably want to re-export."
   function setDirty(isDirty){
     hasUnexportedChanges = isDirty;
+    if(isDirty) staleBannerDismissed = false;
     try{
       if(isDirty) localStorage.setItem(DIRTY_KEY, "1");
       else localStorage.removeItem(DIRTY_KEY);
@@ -883,14 +985,16 @@
   function updateExportBtnState(){
     const btn = document.getElementById('exportBtn');
     if(btn) btn.classList.toggle('btn-dirty', hasUnexportedChanges);
+    if(typeof updateStaleBanner === 'function') updateStaleBanner();
   }
 
   /* ---------------- Elements ---------------- */
   const grid = document.getElementById('grid');
-  const filterRow = document.getElementById('filterRow');
+  const categorySelect = document.getElementById('categorySelect');
   const emptyState = document.getElementById('emptyState');
   const itemCountLabel = document.getElementById('itemCountLabel');
   const searchInput = document.getElementById('searchInput');
+  const searchInputMobile = document.getElementById('searchInputMobile');
   const autosaveText = document.getElementById('autosaveText');
   const autosaveDot = document.querySelector('.autosave-dot');
 
@@ -903,6 +1007,7 @@
 
   const toast = document.getElementById('toast');
   const toastText = document.getElementById('toastText');
+  const toastActionBtn = document.getElementById('toastActionBtn');
 
   /* ---------------- Rendering ---------------- */
   function getCategories(){
@@ -912,19 +1017,20 @@
 
   function renderFilters(){
     const cats = getCategories();
-    let html = '';
-    html += `<button class="pill ${activeCategory==='All' ? 'active':''}" data-cat="All">All <span class="count">${items.length}</span></button>`;
+
+    // If the currently-active category no longer exists (last item of that
+    // category was deleted/moved), fall back to "All" rather than showing a blank select.
+    if(activeCategory !== 'All' && !cats.includes(activeCategory)){
+      activeCategory = 'All';
+    }
+
+    let html = `<option value="All">All (${items.length})</option>`;
     cats.forEach(cat=>{
       const count = items.filter(i=>i.category===cat).length;
-      html += `<button class="pill ${activeCategory===cat ? 'active':''}" data-cat="${escapeAttr(cat)}">${escapeHtml(cat)} <span class="count">${count}</span></button>`;
+      html += `<option value="${escapeAttr(cat)}">${escapeHtml(cat)} (${count})</option>`;
     });
-    filterRow.innerHTML = html;
-    filterRow.querySelectorAll('.pill').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        activeCategory = btn.getAttribute('data-cat');
-        renderAll();
-      });
-    });
+    categorySelect.innerHTML = html;
+    categorySelect.value = activeCategory;
   }
 
   function refreshCategoryDatalist(){
@@ -1019,7 +1125,7 @@
   }
 
   function getFiltered(){
-    return items
+    const results = items
       .filter(i => activeCategory === 'All' || i.category === activeCategory)
       .filter(i => {
         if(!searchQuery) return true;
@@ -1027,8 +1133,14 @@
         const words = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
         // AND across words — every word (via itself, a stemmed base form, or a synonym) must match.
         return words.every(word => expandSearchWord(word).some(c => hay.includes(c)));
-      })
-      .sort((a,b)=> b.createdAt - a.createdAt);
+      });
+
+    switch(sortMode){
+      case 'oldest': return results.sort((a,b)=> a.createdAt - b.createdAt);
+      case 'title-asc': return results.sort((a,b)=> a.title.localeCompare(b.title));
+      case 'category-asc': return results.sort((a,b)=> a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
+      default: return results.sort((a,b)=> b.createdAt - a.createdAt);
+    }
   }
 
   function renderGrid(){
@@ -1058,6 +1170,9 @@
       <div class="card" data-id="${item.id}">
         <div class="card-media">
           ${mediaHtml}
+          <div class="card-select-box" data-role="select-box">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
           <div class="card-catalog">IL-${catalogNo}</div>
           <div class="card-cat-badge">${escapeHtml(item.category)}</div>
         </div>
@@ -1072,8 +1187,14 @@
       </div>`;
     }).join('');
 
+    grid.classList.toggle('select-mode', selectMode);
     grid.querySelectorAll('.card').forEach(card=>{
-      card.addEventListener('click', ()=> openDetail(card.getAttribute('data-id')));
+      const id = card.getAttribute('data-id');
+      card.classList.toggle('selected', selectedIds.has(id));
+      card.addEventListener('click', ()=>{
+        if(selectMode) toggleSelect(id);
+        else openDetail(id);
+      });
     });
 
     grid.querySelectorAll('img[data-broken-fallback]').forEach(img=>{
@@ -1107,24 +1228,140 @@
   }
   function escapeAttr(str){ return escapeHtml(str); }
 
-  function showToast(msg, isError){
+  function showToast(msg, isError, action){
     toastText.textContent = msg;
     toast.querySelector('.dot').style.background = isError ? '#f0605a' : '#4ade80';
     toast.querySelector('.dot').style.boxShadow = isError ? '0 0 8px #f0605a' : '0 0 8px #4ade80';
+
+    if(action){
+      toastActionBtn.style.display = 'inline-block';
+      toastActionBtn.textContent = action.label;
+      toastActionBtn.onclick = ()=>{
+        action.onClick();
+        toast.classList.remove('show');
+        clearTimeout(showToast._t);
+      };
+    } else {
+      toastActionBtn.style.display = 'none';
+      toastActionBtn.onclick = null;
+    }
+
     toast.classList.add('show');
     clearTimeout(showToast._t);
-    showToast._t = setTimeout(()=> toast.classList.remove('show'), 2200);
+    showToast._t = setTimeout(()=> toast.classList.remove('show'), action ? 6000 : 2200);
   }
 
   /* ---------------- Search ---------------- */
   let searchDebounce;
-  searchInput.addEventListener('input', (e)=>{
+  function handleSearchInput(e){
+    const otherInput = e.target === searchInput ? searchInputMobile : searchInput;
+    if(otherInput) otherInput.value = e.target.value;
     clearTimeout(searchDebounce);
     searchDebounce = setTimeout(()=>{
       searchQuery = e.target.value.trim();
       renderGrid();
     }, 120);
+  }
+  searchInput.addEventListener('input', handleSearchInput);
+  searchInputMobile.addEventListener('input', handleSearchInput);
+
+  /* ---------------- Category filter ---------------- */
+  categorySelect.addEventListener('change', ()=>{
+    activeCategory = categorySelect.value;
+    renderGrid();
   });
+
+  /* ---------------- Sort ---------------- */
+  const sortSelect = document.getElementById('sortSelect');
+  sortSelect.addEventListener('change', ()=>{
+    sortMode = sortSelect.value;
+    renderGrid();
+  });
+
+  /* ---------------- Select mode (bulk actions) ---------------- */
+  const selectModeBtn = document.getElementById('selectModeBtn');
+  const selectToolbar = document.getElementById('selectToolbar');
+  const selectCountText = document.getElementById('selectCountText');
+
+  function toggleSelect(id){
+    if(selectedIds.has(id)) selectedIds.delete(id);
+    else selectedIds.add(id);
+    updateSelectUI();
+  }
+
+  function updateSelectUI(){
+    selectCountText.textContent = `${selectedIds.size} selected`;
+    grid.querySelectorAll('.card').forEach(card=>{
+      card.classList.toggle('selected', selectedIds.has(card.getAttribute('data-id')));
+    });
+  }
+
+  function enterSelectMode(){
+    selectMode = true;
+    selectedIds = new Set();
+    selectModeBtn.style.display = 'none';
+    selectToolbar.style.display = 'flex';
+    grid.classList.add('select-mode');
+    updateSelectUI();
+  }
+
+  function exitSelectMode(){
+    selectMode = false;
+    selectedIds = new Set();
+    selectModeBtn.style.display = 'inline-flex';
+    selectToolbar.style.display = 'none';
+    grid.classList.remove('select-mode');
+    grid.querySelectorAll('.card.selected').forEach(c=> c.classList.remove('selected'));
+  }
+
+  selectModeBtn.addEventListener('click', enterSelectMode);
+  document.getElementById('selectCancelBtn').addEventListener('click', exitSelectMode);
+
+  document.getElementById('selectAllBtn').addEventListener('click', ()=>{
+    const visible = getFiltered();
+    const allSelected = visible.length > 0 && visible.every(i => selectedIds.has(i.id));
+    if(allSelected){
+      selectedIds = new Set();
+    } else {
+      visible.forEach(i => selectedIds.add(i.id));
+    }
+    updateSelectUI();
+  });
+
+  document.getElementById('selectDeleteBtn').addEventListener('click', ()=>{
+    if(selectedIds.size === 0){
+      showToast('Nothing selected', true);
+      return;
+    }
+    const prevItems = items.slice();
+    const count = selectedIds.size;
+    items = items.filter(i => !selectedIds.has(i.id));
+    persist();
+    setDirty(true);
+    exitSelectMode();
+    renderAll();
+    showToast(`${count} item${count===1?'':'s'} deleted`, false, {
+      label: 'Undo',
+      onClick: ()=>{
+        items = prevItems;
+        persist();
+        renderAll();
+        showToast('Restored');
+      }
+    });
+  });
+
+  /* ---------------- Stale export banner ---------------- */
+  const staleBanner = document.getElementById('staleBanner');
+  document.getElementById('staleExportBtn').addEventListener('click', ()=> performExport());
+  document.getElementById('staleDismissBtn').addEventListener('click', ()=>{
+    staleBannerDismissed = true;
+    updateStaleBanner();
+  });
+
+  function updateStaleBanner(){
+    staleBanner.style.display = (hasUnexportedChanges && !staleBannerDismissed) ? 'flex' : 'none';
+  }
 
   /* ---------------- Add / Edit Modal ---------------- */
   const fTitle = document.getElementById('fTitle');
@@ -1188,7 +1425,7 @@
     reader.readAsDataURL(file);
   });
 
-  document.getElementById('openAddBtn').addEventListener('click', ()=> openAddModal());
+  document.getElementById('openAddBtnDesktop').addEventListener('click', ()=> openAddModal());
   document.getElementById('emptyAddBtn').addEventListener('click', ()=> openAddModal());
   document.getElementById('closeAddBtn').addEventListener('click', closeAddModal);
   document.getElementById('cancelAddBtn').addEventListener('click', closeAddModal);
@@ -1298,13 +1535,21 @@
 
   document.getElementById('deleteBtn').addEventListener('click', ()=>{
     if(!detailId) return;
-    if(!confirm('Delete this item from your library? This cannot be undone.')) return;
+    const prevItems = items.slice();
     items = items.filter(i=>i.id !== detailId);
     persist();
     setDirty(true);
     closeDetail();
     renderAll();
-    showToast('Item deleted');
+    showToast('Item deleted', false, {
+      label: 'Undo',
+      onClick: ()=>{
+        items = prevItems;
+        persist();
+        renderAll();
+        showToast('Restored');
+      }
+    });
   });
 
   document.getElementById('editBtn').addEventListener('click', ()=>{
@@ -1348,7 +1593,7 @@
     URL.revokeObjectURL(url);
   }
 
-  document.getElementById('exportBtn').addEventListener('click', ()=>{
+  function performExport(){
     if(items.length === 0){
       showToast('Nothing to export yet', true);
       return;
@@ -1363,7 +1608,8 @@
     downloadBlob(jsContent, 'application/javascript', DATA_FILE_NAME);
     setDirty(false);
     showToast(`Exported ${items.length} item${items.length===1?'':'s'} — move ${DATA_FILE_NAME} next to the app`);
-  });
+  }
+  document.getElementById('exportBtn').addEventListener('click', performExport);
 
   /* ---------------- Import ---------------- */
   const importOverlay = document.getElementById('importOverlay');
@@ -1377,16 +1623,30 @@
     importFile.click();
   });
 
+  // Parses either a plain JSON array, or this app's own exported .js file
+  // (`window.__INSPIRATION_LIBRARY_DATA__ = [...];`, with // comment lines above it).
+  function parseImportedFileContent(text){
+    try{
+      return JSON.parse(text);
+    }catch(jsonErr){
+      const match = text.match(/window\.\w+\s*=\s*([\s\S]*?);?\s*$/);
+      if(match){
+        try{
+          return JSON.parse(match[1]);
+        }catch(jsErr){ /* fall through to null */ }
+      }
+      return null;
+    }
+  }
+
   importFile.addEventListener('change', ()=>{
     const file = importFile.files[0];
     if(!file) return;
     const reader = new FileReader();
     reader.onload = (e)=>{
-      let parsed;
-      try{
-        parsed = JSON.parse(e.target.result);
-      }catch(err){
-        showToast('That file is not valid JSON', true);
+      const parsed = parseImportedFileContent(e.target.result);
+      if(parsed === null){
+        showToast('Could not read that file as JSON or a library export', true);
         return;
       }
       if(!Array.isArray(parsed)){
@@ -1428,6 +1688,22 @@
       : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
   }
 
+  // Flags items that look like they already exist in the library — same title (case/whitespace-
+  // insensitive) or the exact same image URL. This only warns; it never blocks the import.
+  function findDuplicateMatch(item){
+    const t = (item.title || '').trim().toLowerCase();
+    return items.find(ex =>
+      (t && ex.title && ex.title.trim().toLowerCase() === t) ||
+      (item.imageUrl && ex.imageUrl && item.imageUrl === ex.imageUrl)
+    ) || null;
+  }
+
+  function importDupWarningHtml(item){
+    const dup = findDuplicateMatch(item);
+    if(!dup) return '';
+    return `<div class="import-dup-warning">⚠ Possible duplicate of "${escapeHtml(dup.title)}"</div>`;
+  }
+
   function renderImportList(skipped){
     if(!pendingImportItems || pendingImportItems.length === 0){
       importList.innerHTML = '';
@@ -1438,8 +1714,10 @@
     importSummary.textContent = `${pendingImportItems.length} item${pendingImportItems.length===1?'':'s'} ready to import — review, tweak, or remove any before bringing them in` +
       (skipped ? ` (${skipped} skipped from the file — missing a title).` : '.');
 
-    importList.innerHTML = pendingImportItems.map((item, idx)=> `
-      <div class="import-row" data-idx="${idx}">
+    importList.innerHTML = pendingImportItems.map((item, idx)=> {
+      const dup = findDuplicateMatch(item);
+      return `
+      <div class="import-row${dup ? ' has-dup' : ''}" data-idx="${idx}">
         <div class="import-thumb" data-role="thumb">${importThumbHtml(item)}</div>
         <div class="import-row-fields">
           <input type="text" class="import-row-title" data-field="title" value="${escapeAttr(item.title)}" placeholder="Title">
@@ -1461,12 +1739,14 @@
               <input type="text" data-field="sourceUrl" value="${escapeAttr(item.sourceUrl)}" placeholder="https://…">
             </div>
           </div>
+          <div data-role="dup-warning">${importDupWarningHtml(item)}</div>
         </div>
         <button type="button" class="import-remove-btn" data-role="remove" title="Remove from import">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   // Event delegation — the list is rebuilt on removal, so bind once on the stable container.
@@ -1487,6 +1767,13 @@
     if(field === 'imageUrl'){
       const thumb = row.querySelector('[data-role="thumb"]');
       if(thumb) thumb.innerHTML = importThumbHtml(item);
+    }
+
+    if(field === 'title' || field === 'imageUrl'){
+      const dup = findDuplicateMatch(item);
+      row.classList.toggle('has-dup', !!dup);
+      const warningEl = row.querySelector('[data-role="dup-warning"]');
+      if(warningEl) warningEl.innerHTML = importDupWarningHtml(item);
     }
   });
 
