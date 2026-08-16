@@ -2,6 +2,41 @@
 // Keep this file named exactly "inspiration-library-data.js" and in the same folder as the app.
 window.__INSPIRATION_LIBRARY_DATA__ = [
   {
+    "id": "itm_iivgoanumsvwzffs",
+    "title": "Guru-Price — Peek-Through Bundle Product Grid with Discount Badges",
+    "imageUrl": "screenshots/section/guru-price.png",
+    "sourceUrl": "https://gurunanda.com",
+    "category": "Product Grid",
+    "tags": [
+      "bundle product cards",
+      "discount badge corner",
+      "star rating + review count",
+      "peek-through card edge",
+      "full-width solid cta"
+    ],
+    "notes": "A large centered section title sits above a horizontal row of bundle product cards, with the row cropped so the next card's edge peeks in from the right side, hinting at more content to scroll or swipe through. Each card shows a product-group photo with a discount badge pinned to the top-right corner, a bold bundle title, a star rating paired with a review count, a price, and a full-width solid-color 'add to cart' button anchored at the bottom. This pattern would suit an ecommerce site presenting curated bundles or kits wanting a scannable, review-forward, high-conversion card layout.",
+    "promptFragment": "[heading]\nBuild a large, bold, centered section title above a horizontal card row, with generous vertical spacing before the cards begin. Customization options: heading size and alignment.\n\n[cards]\nBuild a horizontal row of bundle/product cards, sized so that the row is intentionally cropped at the right edge to reveal a partial peek of the next card, signaling more content off-screen. Each card contains: a top image area showing a grouped product photo with a discount badge (e.g. '25% OFF') pinned to the top-right corner; a bold multi-line bundle/product title; a star-rating row paired with a review count in muted text; a price line; and a full-width solid-color 'Add to Cart' button anchored at the bottom of the card. Customization options: card count visible, discount badge style/color, rating display (stars only vs. stars+count), and button color/width.",
+    "createdAt": 1786891367656
+  },
+  {
+    "id": "itm_he1vs3cxmsvwz9qm",
+    "title": "Guru-Nanda — Promo Hero with Announcement Bar and Floating Chat Widget",
+    "imageUrl": "screenshots/site/guru-nanda.png",
+    "sourceUrl": "https://gurunanda.com",
+    "category": "Site",
+    "tags": [
+      "announcement bar w/ arrows",
+      "carousel dot pagination",
+      "floating chat widget",
+      "lifestyle promo overlay",
+      "discount code banner",
+      "two-tone headline"
+    ],
+    "notes": "A solid-color announcement bar spans the top of the page with a centered promo message and small prev/next arrow controls on either side for cycling through multiple messages. Below a centered logo nav with hamburger and icon utilities, a tall lifestyle photo serves as the hero background, with a bold two-color headline overlaid directly on the scene and a solid-color discount-code banner anchored near the bottom, followed by a row of small dot pagination indicators showing carousel position. Further down, a two-tone page headline (part neutral, part accent color) introduces the next content section, and a circular floating chat-widget bubble sits fixed in the lower corner throughout. This pattern would suit a consumer wellness or personal-care ecommerce site wanting a lifestyle-driven promotional hero with persistent support access.",
+    "promptFragment": "[announcement bar]\nBuild a solid-color announcement bar spanning the full width of the page, with a centered short promo message and small left/right chevron arrow icons at the outer edges for cycling through multiple rotating messages. Customization options: bar color, message rotation speed, and arrow visibility.\n\n[nav]\nBuild a nav bar with a hamburger menu icon on the left, a centered logo, and search/cart icons on the right, on a plain white background beneath the announcement bar. Customization options: logo position, icon count, and nav background.\n\n[hero]\nBuild a tall promotional hero using a full-bleed lifestyle photo as the background, with a bold multi-line headline overlaid directly on the image using two different accent colors for different phrases. Beneath the headline, place product imagery styled naturally among lifestyle props within the same scene, and a solid-color rectangular banner containing a discount code message near the bottom of the hero. Add a row of small dot pagination indicators (with one dot elongated/highlighted to show active position) centered beneath the hero to indicate a multi-slide carousel. Customization options: headline color pairing, discount banner style, dot pagination style, and number of carousel slides.\n\n[chat widget]\nBuild a circular floating chat/support widget button fixed to the lower-right corner of the viewport, using an accent color with a simple message/chat icon centered inside, persistent across scroll. Customization options: widget color, icon style, and corner position.",
+    "createdAt": 1786891360270
+  },
+  {
     "id": "itm_mrioqok7msrs25ce",
     "title": "Haque — Pill-Style FAQ Accordion with Expanded Solid-Color State",
     "imageUrl": "screenshots/section/haque-faq.png",
